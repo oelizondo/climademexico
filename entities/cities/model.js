@@ -7,6 +7,8 @@ const City = sequelize.define('city', {
     type: Sequelize.STRING,
     allowNull: false
   }
+}, {
+  timestamps: false,
 })
 
 City.hasMany(Reading)

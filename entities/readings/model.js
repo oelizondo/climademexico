@@ -34,10 +34,20 @@ const Reading = sequelize.define('reading', {
     type: Sequelize.FLOAT,
     allowNull: true
   },
-  date: {
-    type: Sequelize.DATE,
+  day: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  month: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  year: {
+    type: Sequelize.INTEGER,
     allowNull: false
   }
+}, {
+  timestamps: false,
 })
 
 module.exports = Reading
