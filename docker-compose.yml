@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=1210
+      - POSTGRES_DB=climademexico
+      - POSTGRES_USER=oscar
+
+  web:
+    build: .
+    volumes:
+      - .:/usr/app
+    ports:
+      - 9000:9000
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://oscar:1210@db:5432/climademexico
