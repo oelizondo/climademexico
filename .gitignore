@@ -1,2 +1,4 @@
 node_modules
 data
+sample_data.txt
+inject_script.js
