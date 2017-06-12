@@ -13,7 +13,7 @@ module.exports = (app) => {
   })
 
   app.get('/api/cities/:city', async (req, res) => {
-    const cityName = req.body.city
+    const cityName = req.params.city
 
     let city = null
     try {
@@ -27,8 +27,8 @@ module.exports = (app) => {
 
   app.get('/api/cities/:city/:year', async (req, res) => {
     let readings = null
-    const cityName = req.body.city
-    const year     = req.body.year
+    const cityName = req.params.city
+    const year     = req.params.year
 
     try {
       readings = await CityController.getCity(cityName)
