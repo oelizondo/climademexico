@@ -1,7 +1,8 @@
 ## Clima en México
+
 ### Pequeña API hecha para consumir las temperaturas históricas del país.
 
-### ¿Qué hay?
+### Qué hay
 
 * Datos históricos del clima desde 1977 hasta el 2017
 
@@ -18,7 +19,7 @@
 
 ```console
 $ git clone git@github.com:oelizondo/climademexico.git && cd climaenmexico
-$ docker-compose up -d
+$ docker-compose up web -d
 ```
 
 ### Consumir la aplicación
