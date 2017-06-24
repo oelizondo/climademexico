@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon index.js"
+    "start": "./node_modules/.bin/nodemon index.js",
+    "test": "node test/index"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,10 @@
     "pg": "^6.2.3",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0",
+    "tape": "^4.6.3"
   }
 }
