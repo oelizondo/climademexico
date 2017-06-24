@@ -22,17 +22,22 @@ const getCity = async (condition) => {
       where: {
         name: condition,
       },
-      include: [{model: Reading}]
+      include: [
+        {
+          model: Reading,
+          attributes: ['temperature', 'max', 'min', 'atmospheric_pressure', 'humidity', 'precipitation', 'visibility', 'wind_speed', 'maximum_maintained_wind_speed', 'month', 'year']
+        }
+      ],
+      attributes: ['id', 'name']
     })
   } catch(e) {
     return e
   }
-
   return city
 }
 
 const getCityAndYear = async (condition, year) => {
-  let readings = nul
+  let readings = null
   try {
     readings = await City.findAll({
       where: {
@@ -42,8 +47,10 @@ const getCityAndYear = async (condition, year) => {
         model: Reading,
         where: {
           year: year
-        }
-      }]
+        },
+        attributes: ['temperature', 'max', 'min', 'atmospheric_pressure', 'humidity', 'precipitation', 'visibility', 'wind_speed', 'maximum_maintained_wind_speed', 'month', 'year']
+      }],
+      attributes: ['id', 'name']
     })
   } catch(e) {
     return e

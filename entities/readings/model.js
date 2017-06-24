@@ -34,9 +34,9 @@ const Reading = sequelize.define('reading', {
     type: Sequelize.FLOAT,
     allowNull: true
   },
-  day: {
-    type: Sequelize.INTEGER,
-    allowNull: false
+  maximum_maintained_wind_speed: {
+    type: Sequelize.FLOAT,
+    allowNull: true
   },
   month: {
     type: Sequelize.INTEGER,

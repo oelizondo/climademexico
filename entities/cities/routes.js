@@ -31,11 +31,11 @@ module.exports = (app) => {
     const year     = req.params.year
 
     try {
-      readings = await CityController.getCity(cityName)
+      readings = await CityController.getCityAndYear(cityName, year)
     } catch(e) {
       return res.send(e)
     }
-  
+
     res.send(readings)
   })
 }
