@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/nodemon index.js",
-    "test": "node test/index"
+    "test": "node test/index",
   },
   "keywords": [],
   "author": "",

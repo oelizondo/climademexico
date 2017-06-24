@@ -20,6 +20,7 @@ services:
       - db
     environment:
       - DATABASE_URL=postgres://oscar:1210@db:5432/climademexico
+    command: npm start
 
   test:
     build: .
